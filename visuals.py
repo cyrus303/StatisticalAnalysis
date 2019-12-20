@@ -84,21 +84,7 @@ def cluster_results(reduced_data, preds, centers, pca_samples):
 
 
 def biplot(good_data, reduced_data, pca):
-    '''
-    Produce a biplot that shows a scatterplot of the reduced
-    data and the projections of the original features.
-    
-    good_data: original data, before transformation.
-               Needs to be a pandas dataframe with valid column names
-    reduced_data: the reduced data (the first two dimensions are plotted)
-    pca: pca object that contains the components_ attribute
-
-    return: a matplotlib AxesSubplot object (for any additional customization)
-    
-    This procedure is inspired by the script:
-    https://github.com/teddyroland/python-biplot
-    '''
-
+   
     fig, ax = plt.subplots(figsize = (14,8))
     # scatterplot of the reduced data    
     ax.scatter(x=reduced_data.loc[:, 'Dimension 1'], y=reduced_data.loc[:, 'Dimension 2'], 
