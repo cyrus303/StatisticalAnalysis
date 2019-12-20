@@ -28,6 +28,13 @@ def pca_results(good_data, pca):
 	components = pd.DataFrame(np.round(pca.components_, 4), columns = good_data.keys())
 	components.index = dimensions
 
+	# PCA explained variance
+	ratios = pca.explained_variance_ratio_.reshape(len(pca.components_), 1)
+	variance_ratios = pd.DataFrame(np.round(ratios, 4), columns = ['Explained Variance'])
+	variance_ratios.index = dimensions
+
+	# Create a bar plot visualization
+	fig, ax = plt.subplots(figsize = (14,8))
 
 	# Plot the feature weights as a function of the components
 	components.plot(ax = ax, kind = 'bar');
