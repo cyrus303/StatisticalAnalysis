@@ -143,4 +143,7 @@ def channel_results(reduced_data, outliers, pca_samples):
 	# Generate the cluster plot
 	fig, ax = plt.subplots(figsize = (14,8))
 
+	# Color map
+	cmap = cm.get_cmap('gist_rainbow')
+
 	
