@@ -155,4 +155,6 @@ def channel_results(reduced_data, outliers, pca_samples):
 	    
 	# Plot transformed sample points   
 	for i, sample in enumerate(pca_samples):
+		ax.scatter(x = sample[0], y = sample[1], \
+	           s = 200, linewidth = 3, color = 'black', marker = 'o', facecolors = 'none');
 		
