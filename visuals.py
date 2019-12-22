@@ -159,4 +159,5 @@ def channel_results(reduced_data, outliers, pca_samples):
 	           s = 200, linewidth = 3, color = 'black', marker = 'o', facecolors = 'none');
 		ax.scatter(x = sample[0]+0.25, y = sample[1]+0.3, marker='$%d$'%(i), alpha = 1, s=125);
 
+	# Set plot title
 	
