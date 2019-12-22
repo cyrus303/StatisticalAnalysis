@@ -160,4 +160,4 @@ def channel_results(reduced_data, outliers, pca_samples):
 		ax.scatter(x = sample[0]+0.25, y = sample[1]+0.3, marker='$%d$'%(i), alpha = 1, s=125);
 
 	# Set plot title
-	
+	ax.set_title("PCA-Reduced Data Labeled by 'Channel'\nTransformed Sample Data Circled");
