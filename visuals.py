@@ -135,3 +135,9 @@ def channel_results(reduced_data, outliers, pca_samples):
 	    print ("Dataset could not be loaded. Is the file missing?")
 	    return False
 
+	# Create the Channel DataFrame
+	channel = pd.DataFrame(full_data['Channel'], columns = ['Channel'])
+	channel = channel.drop(channel.index[outliers]).reset_index(drop = True)
+	labeled = pd.concat([reduced_data, channel], axis = 1)
+	
+	
