@@ -140,4 +140,7 @@ def channel_results(reduced_data, outliers, pca_samples):
 	channel = channel.drop(channel.index[outliers]).reset_index(drop = True)
 	labeled = pd.concat([reduced_data, channel], axis = 1)
 	
+	# Generate the cluster plot
+	fig, ax = plt.subplots(figsize = (14,8))
+
 	
