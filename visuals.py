@@ -153,4 +153,5 @@ def channel_results(reduced_data, outliers, pca_samples):
 	    channel.plot(ax = ax, kind = 'scatter', x = 'Dimension 1', y = 'Dimension 2', \
 	                 color = cmap((i-1)*1.0/2), label = labels[i-1], s=30);
 	    
+	# Plot transformed sample points   
 	
