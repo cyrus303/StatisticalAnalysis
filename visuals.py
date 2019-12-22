@@ -154,4 +154,5 @@ def channel_results(reduced_data, outliers, pca_samples):
 	                 color = cmap((i-1)*1.0/2), label = labels[i-1], s=30);
 	    
 	# Plot transformed sample points   
-	
+	for i, sample in enumerate(pca_samples):
+		
